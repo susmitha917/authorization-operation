@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Profile</title>
+    
+</head>
+
+<body>
+    <h1>Profile Page</h1>
+    <h2>Welcome {{name}}</h2>
+    {%if messages%}
+      {%for message in messages%}
+        <small{%if message.tags%} class="{{messages.tags}}" {%endif%}> {{message}}</small>
+      {% endfor%}
+    {%endif%}
+    <a href="{% url 'changepass' %}">Change Password</a>
+    <a href="{% url 'changepass1' %}">Change Password1</a>
+    <a href="{% url 'logout' %}">Logout</a>
+			
+</body>
+</html>
